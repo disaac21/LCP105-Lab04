@@ -5,7 +5,7 @@ public class SpiderPunk extends Personaje {
     public SpiderPunk() {
         super();
     }
-    
+
     public SpiderPunk(String string, double d, double d1, String string1) {
         super(string, d, d1, string1);
     }
@@ -46,10 +46,25 @@ public class SpiderPunk extends Personaje {
     public String toString() {
         return super.toString();
     }
-    
-    public double Ataque(Personaje p){
-        
-        return 0;
+
+    public double Ataque(Personaje p) {
+        if (p instanceof Blindado) {
+            double vida;
+            vida = p.getPuntosvida();
+
+            double dano;
+            dano = puntosataque + puntosataque * 0.15;
+
+            double newvida;
+            newvida = vida - dano;
+
+            return newvida;
+        } else {
+            double newvida;
+            newvida = p.getPuntosvida() - puntosataque;
+
+            return newvida;
+        }
     }
-    
+
 }

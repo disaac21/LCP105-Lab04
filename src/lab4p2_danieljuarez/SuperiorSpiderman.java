@@ -1,7 +1,11 @@
 package lab4p2_danieljuarez;
 
+import java.util.Random;
+
 public class SuperiorSpiderman extends Personaje {
 
+    static Random random = new Random();
+    
     public SuperiorSpiderman() {
         super();
     }
@@ -46,10 +50,23 @@ public class SuperiorSpiderman extends Personaje {
     public String toString() {
         return super.toString();
     }
-    
-    public double Ataque(Personaje pv){
+
+    public double Ataque(Personaje p) {
+        //  Hace un daño extra aleatorio en el rango 10%-30%
         
-        return 0;
+            double vida;
+            vida = p.getPuntosvida();
+            
+            double randomizer = 0.10 + random.nextDouble(0.20);
+            
+            double dano;
+            dano = puntosataque + puntosataque * randomizer;
+
+            double newvida;
+            newvida = vida - dano;
+
+            return newvida;
+        
     }
 
 }

@@ -46,10 +46,12 @@ public class Clasico extends Personaje {
     public String toString() {
         return super.toString();
     }
-    
-    public double Ataque(Personaje p){
-        
-        return 0;
+
+    public double Ataque(Personaje p) {
+        double newvida;
+        newvida = p.getPuntosvida() - puntosataque;
+
+        return newvida;
     }
-    
+
 }
