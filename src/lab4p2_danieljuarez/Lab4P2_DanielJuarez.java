@@ -76,7 +76,7 @@ public class Lab4P2_DanielJuarez {
                 }
                 break;
                 case 4: {
-                    
+
                     for (int i = 0; i < malos.size(); i++) {
                         System.out.println(i + "-" + malos.get(i));
                     }
@@ -98,21 +98,45 @@ public class Lab4P2_DanielJuarez {
                     malos.get(modmalos).setPuntosataque(puntosataque);
                     malos.get(modmalos).setPuntosvida(puntosvida);
                     malos.get(modmalos).setNombreuniverso(universo);
-                    
+
                 }
                 break;
                 case 5: {
                     Collections.shuffle(spidermans);
                     Collections.shuffle(malos);
+
+                    for (int i = 0; i < 6; i++) {
+                        System.out.println("--- PELEA de " + spidermans.get(i).getNombre() + " y " + malos.get(i).getNombre() + " ---");
+                        
+                        malos.get(i).setPuntosvida(500);
+                        spidermans.get(i).setPuntosvida(500);
+                        
+                        while (spidermans.get(i).getPuntosvida() > 0 || malos.get(i).getPuntosvida() > 0) {
+                            Pelea(spidermans.get(i), malos.get(i));
+                            
+                            
+//                            System.out.println(spidermans.get(i));
+//                            System.out.println(malos.get(i));
+                        }
+                    }
+
                 }
                 break;
             } // fin switch menu
         } //fin while menu
     } // fin main
 
-    public static Personaje Modificar() {
-        //nombre, puntos de ataque, puntos de vida, nombre de universo.
-        return null;
+    public static void Pelea(Personaje uno, Personaje dos) {
+
+        // Spiderman Acuático atacó a Octopus haciéndole 400 de daño y dejándolo a 600 de vida
+
+        double vados = dos.getPuntosvida();
+        double vauno = uno.getPuntosvida();
+        dos.setPuntosvida(uno.Ataque(dos));
+        System.out.println(uno.getNombre() + " atacó a " + dos.getNombre() + " haciendole "+ (vados - dos.getPuntosvida()) + " y dejandolo en "+ dos.getPuntosvida() + " puntos de vida");
+        uno.setPuntosvida(dos.Ataque(uno));
+        System.out.println(dos.getNombre() + " atacó a " + uno.getNombre() + " haciendole "+ (vauno - uno.getPuntosvida()) + " y dejandolo en "+ uno.getPuntosvida() + " puntos de vida");
+
     }
 
 } // fin clase

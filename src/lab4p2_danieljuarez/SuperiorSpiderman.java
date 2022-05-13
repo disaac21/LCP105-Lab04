@@ -59,12 +59,12 @@ public class SuperiorSpiderman extends Personaje {
             
             double randomizer = 0.10 + random.nextDouble(0.20);
             
-            double dano;
+            double dano = 0;
             dano = puntosataque + puntosataque * randomizer;
 
             double newvida;
             newvida = vida - dano;
-
+            
             return newvida;
         
     }
