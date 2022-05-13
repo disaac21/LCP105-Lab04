@@ -51,7 +51,7 @@ public abstract class Personaje {
 
     @Override
     public String toString() {
-        return "Personaje{" + "nombre=" + nombre + ", puntosataque=" + puntosataque + ", puntosvida=" + puntosvida + ", nombreuniverso=" + nombreuniverso + '}';
+        return "Personaje{" + nombre + ", Ataque: " + puntosataque + "Vida: " + puntosvida + "Universo: " + nombreuniverso + "\n";
     }
     
     public abstract double Ataque(Personaje p);
