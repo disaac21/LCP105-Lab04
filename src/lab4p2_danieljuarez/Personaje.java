@@ -1,3 +1,5 @@
+package lab4p2_danieljuarez;
+
 public abstract class Personaje {
     
     public String nombre;
