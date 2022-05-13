@@ -19,8 +19,28 @@ public class Blindado extends Personaje{
         super(nombre, puntosataque, puntosvida, nombreuniverso);
     }
     
-    public double Ataque(){
-        return 0;
+    public double Ataque(Personaje p){
+        
+        if (p instanceof Clasico) 
+        {
+            double vida;
+            vida = p.getPuntosvida();
+            
+            double dano;
+            dano = puntosataque + puntosataque*0.10;
+            
+            double newvida;
+            newvida = vida - dano;
+            
+            return newvida;
+        }
+        else
+        {
+            double newvida;
+            newvida = p.getPuntosvida() - puntosataque;
+            
+            return newvida;
+        }
     }
 
     @Override
