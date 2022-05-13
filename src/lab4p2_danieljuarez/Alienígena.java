@@ -19,7 +19,7 @@ public class Alienígena extends Personaje{
         super(nombre, puntosataque, puntosvida, nombreuniverso);
     }
     
-    public double Ataque(){
+    public double Ataque(Personaje p){
         return 0;
     }
     

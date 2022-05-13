@@ -54,6 +54,6 @@ public abstract class Personaje {
         return "Personaje{" + "nombre=" + nombre + ", puntosataque=" + puntosataque + ", puntosvida=" + puntosvida + ", nombreuniverso=" + nombreuniverso + '}';
     }
     
-    public abstract double Ataque();
+    public abstract double Ataque(Personaje p);
     
 }

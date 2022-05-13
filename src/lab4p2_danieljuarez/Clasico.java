@@ -47,7 +47,7 @@ public class Clasico extends Personaje {
         return super.toString();
     }
     
-    public double Ataque(){
+    public double Ataque(Personaje p){
         
         return 0;
     }

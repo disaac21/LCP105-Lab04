@@ -47,7 +47,7 @@ public class SuperiorSpiderman extends Personaje {
         return super.toString();
     }
     
-    public double Ataque(){
+    public double Ataque(Personaje pv){
         
         return 0;
     }
