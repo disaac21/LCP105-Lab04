@@ -19,8 +19,18 @@ public class Alienígena extends Personaje{
         super(nombre, puntosataque, puntosvida, nombreuniverso);
     }
     
-    public double Ataque(Personaje p){
-        return 0;
+    public double Ataque(Personaje p)
+    {
+        double vida;
+        vida = p.getPuntosvida();
+
+        double dano;
+        dano = puntosataque + puntosataque*0.30;
+
+        double newvida;
+        newvida = vida - dano;
+
+        return newvida;
     }
     
     @Override

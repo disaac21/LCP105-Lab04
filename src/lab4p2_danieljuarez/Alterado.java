@@ -20,7 +20,26 @@ public class Alterado extends Personaje{
     }
     
     public double Ataque(Personaje p){
-        return 0;
+        if (p instanceof SpiderPunk) 
+        {
+            double vida;
+            vida = p.getPuntosvida();
+            
+            double dano;
+            dano = puntosataque + puntosataque*0.10;
+            
+            double newvida;
+            newvida = vida - dano;
+            
+            return newvida;
+        }
+        else
+        {
+            double newvida;
+            newvida = p.getPuntosvida() - puntosataque;
+            
+            return newvida;
+        }
     }
 
     @Override
