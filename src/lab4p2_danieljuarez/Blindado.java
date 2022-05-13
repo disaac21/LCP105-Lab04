@@ -26,7 +26,7 @@ public class Blindado extends Personaje{
             double vida;
             vida = p.getPuntosvida();
             
-            double dano;
+            double dano = 0;
             dano = puntosataque + puntosataque*0.10;
             
             double newvida;

@@ -24,7 +24,7 @@ public class Alienígena extends Personaje{
         double vida;
         vida = p.getPuntosvida();
 
-        double dano;
+        double dano = 0;
         dano = puntosataque + puntosataque*0.30;
 
         double newvida;
