@@ -24,7 +24,9 @@ public class Lab4P2_DanielJuarez {
 
             switch (menu) {
                 case 1: {
-
+                    
+                    System.out.println("Testing");
+                    
                 }
                 break;
                 case 2: {
